@@ -1,5 +1,6 @@
 --문제 1
-select  first_name
+select  
+		first_name
         ,salary
         ,phone_number
         ,hire_date
@@ -7,7 +8,8 @@ from employees
 order by hire_date asc;
 
 --문제 2
-select  job_title
+select  
+		job_title
         ,max_salary
 from jobs
 order by max_salary desc;
@@ -51,7 +53,7 @@ from employees
 where first_name like '%S%'
 or first_name like '%s%';
 
---문제 8 얜 아직 안됨
+--문제 8
 select department_name
 from departments
 order by length(department_name) desc;
