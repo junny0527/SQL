@@ -11,8 +11,6 @@ where salary < (SELECT
 --평균급여 이상, 최대급여 이하의 월급을 받는 사원의 
 --직원번호(employee_id), 이름(first_name), 급여(salary), 평균급여, 
 --최대급여를 급여의 오름차순으로 정렬하여 출력하세요
-select avg(salary)
-from employees;
 
 select  
         em.employee_id 직원번호,
