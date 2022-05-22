@@ -150,15 +150,14 @@ order by em.salary asc , em.department_id;
 
 --문제8.
 --평균 급여(salary)가 가장 높은 부서는?
-SELECT
-  em.department_name,
-  de.department_name
-FROM departments de,employees em
-group by department_name
-HAVING avg(salary) = (SELECT 
-                            max(avg(salary))
-                        from departments
-                        GROUP by department_name);
+select 
+de.department_name
+from employees em, departments de
+where em.department_id = de.department_id
+group by de.department_name
+having avg(salary) = (select max(avg(salary))
+                        from employees
+                        group by department_id);
 
 --문제9.
 --평균 급여(salary)가 가장 높은 지역은?
